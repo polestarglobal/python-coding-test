@@ -30,14 +30,14 @@
                                                                                                                        
     <script type="text/javascript">                                                                                    
       $(document).ready(function () {
-        var mapboxAccessToken = 'pk.eyJ1Ijoiam9wYW4iLCJhIjoiY2pxd3J0bHl4MHh1YjN4bXFkbjY2dHY4NCJ9.nQEfwXf3OEOah9gVYeeoXQ';
+        var mapboxAccessToken = 'pk.eyJ1IjoicG9sZXN0YXIiLCJhIjoiY2t5YWw2aXpmMDZoOTJ1cGxvZ3NsaG8xaiJ9.0LrogHsH5q1JdyVeN0fvTw';
         var map = L.map('mapid').setView([39.433, -0.302], 2.2);                                                
                                                                                                                
         // Add MapBox layer.                                                                                   
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
-          id: 'mapbox.light',                                                                          
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
+          id: 'polestar/ckhc517qp15dq19l8v62pkv4k',
           attribution: 'Pole Star Space Applications, Ltd.'                                                              
-        }).addTo(map);                                                                                                   
+        }).addTo(map);
 
         $.ajax({
           url: 'http://localhost:8000/api/ships/',
